@@ -1,0 +1,129 @@
+body {
+  background-image: url('../images/background.jpg');
+  width: 100%;
+  height: 100%;
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+
+html {
+  height: 100%; }
+
+@font-face {
+  font-family: Gotham-Rnd;
+  src: url(../fonts/GothamRnd-Light.otf); }
+
+wrapper {
+  display: inline;
+  float: left;
+  width: 97.59615%;
+  margin: 0 1.20192%;
+  height: 100%;
+  font-family: Gotham-Rnd;
+  font-size: 14px; }
+
+.header {
+  width: 100%;
+  height: 90px;
+  margin-top: 26px;
+  padding-left: 30px;
+  float: left;
+  position: fixed;
+  display: inline-block;
+  color: white;
+  z-index: 5; }
+
+.header img {
+  float: left; }
+
+.header li {
+  margin-top: 10px;
+  margin-left: 70px;
+  display: inline-block; }
+
+.header a {
+  text-decoration: none;
+  color: #fff; }
+
+.header a:hover {
+  transition: .3s color ease-in-out;
+  moz-transition: color .3s ease-in-out;
+  -mebkit-transition: color .3s ease-in-out;
+  color: #29773a; }
+
+header {
+  display: none;
+  background-color: #3fc062;
+  height: 82px;
+  float: left;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 4; }
+
+#login {
+  padding-left: 220px; }
+
+iframe {
+  display: none;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  float: left;
+  position: absolute;
+  left: 0;
+  margin-top: 80px; }
+
+#geocomplete {
+  width: 300px;
+  height: 20px; }
+
+#search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -150px;
+  z-index: 2; }
+
+.pac-container {
+  height: 98px; }
+
+.map_canvas {
+  background-image: url("../images/background.jpg");
+  height: 100%;
+  width: 100%;
+  float: left;
+  position: absolute;
+  left: 0;
+  z-index: 1; }
+
+#top {
+  background-color: #3fc062;
+  height: 100px;
+  width: 100%;
+  z-index: 4; }
+
+/* #results {
+  display: none;
+  border: 1px solid #3fc062;
+  width: 400px;
+  height:60%;
+  background-color:#fff;
+  float:left;
+  position: absolute;
+  margin-top:118px;
+  left:40px;
+  z-index:4;
+} */
+#results {
+  width: 200px;
+  height: 500px;
+  background-color: blue;
+  float: left;
+  position: absolute;
+  margin-top: 200px;
+  z-index: 4; }

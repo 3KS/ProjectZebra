@@ -1,0 +1,105 @@
+#userName{
+	float:left;
+}
+
+#signUpButton{
+	float:right;
+}
+
+#myForm{
+	z-index: 100;
+	position: absolute;
+	width:840px;
+	height:400px;
+	top:50%;
+	left:50%;
+	margin-left: -420px;
+	margin-top: -200px;
+	background-color: #7f7f7f;
+}
+
+#signIn {
+	float:left;
+	width:180px;
+	margin-left:5%;
+	margin-right:10%;
+}
+
+#register {
+	float:left;
+	width:180px;
+	margin-left:10%;
+}
+
+#captcha {
+	float:left;
+	margin-left: 20px;
+	margin-top:76px;
+}
+
+
+.regForm h1 {
+	width:70px;
+	height:25px;
+	background-color:#515151;
+	border-style:none;
+	color:#fff;
+	font-weight:lighter;
+	font-size:18px;
+	padding-top:5px;
+	padding-left:15px;
+	padding-right:10px;
+	margin-bottom:30px;
+}
+
+.regForm label {
+	color:#515151;
+	font-weight:100;
+}
+
+.regForm input {
+	height:24px;
+	width:180px;
+	margin-top: 5px;
+	margin-bottom:15px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
+}
+
+.regForm input[type=button] {
+	width:60px;
+	color:#fff;
+	background-color:#333333;
+	font-weight:lighter;
+	font-size:10px;
+	margin-top:5px;
+	float:right;
+}
+.regForm img {
+	float:left;
+	margin-top: 5px;
+	margin-bottom:19px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
+}
+
+.vertLine {
+	background-color: #717171;
+	width:2px;
+	height:66%;
+	margin-top:8%;
+	float:left;
+}
+
+.hiddenText {
+	color:red;
+	display:none;
+}
+
+.hidden{
+	display:none;
+}
