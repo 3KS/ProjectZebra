@@ -100,7 +100,7 @@
                </div>
             </form>
 
-<!--
+
         <div id="results">
             <div id="content">Hello <span></span></div>
             <p id="example"></p>
@@ -109,7 +109,7 @@
                 <li>Location: <span id="goo" data-geo="location"></span>
                 </li>
             </ul>
-        </div> -->
+        </div> 
 
         <div class="header">
             <a href="index.html">
@@ -126,7 +126,7 @@
 
         </div>
 
-        <!-- <div id="results"><div id="top"></div></div> -->
+        <!--<div id="results"><div id="top"></div></div> -->
 
 
         <div id="search">
@@ -261,11 +261,23 @@
                 }, 3000);
                  //loading an new JSON everytime.
                  var myURL = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?parameters&sensor=false&key=AIzaSyAK4adoae0xcmjFMql51gMZBnI8v-j_uMg&rankby=distance&keyword=college&jsonp=parseresponse&callback=?&location=' + $('#goo').text();
-                //document.getElementById('loo').href = myURL; 
-
+                document.getElementById('loo').href = myURL; 
                 $("#results").css("display", "initial");
-                 
+                
+                $.ajax({
+                    type: 'GET',
+                    url: myURL,
+                    contentType: "application/json",
+                    success: function(json) {
+                        console.log("sucess");
+                    },
+                    error: function(e) {
+                        console.log(e.message);
+                    }
+                });
+
                 $('#content span').html('Asshole');
+                
                 //Shift stays
                 if (!searchShifted) {
                     $('#search').animate({
