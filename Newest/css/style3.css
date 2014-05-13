@@ -1,16 +1,45 @@
 body {
   width: 100%;
   height: 10%;
-  *zoom: 1; }
-  body:before, body:after {
+  *zoom: 1; 
+    font-family: 'Gotham-Rnd';
+    color: #333;
+    overflow: scroll;
+    overflow-x: hidden;
+       margin-top: 80px;
+  }
+body:before, body:after {
     content: "";
     display: table; }
-  body:after {
+body:after {
     clear: both;}
 
-html {
-  height: 100%; 
-  color:black; }
+html { height: 100%; }
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
 
   @font-face
 {
@@ -37,26 +66,7 @@ header {
   width: 100%;
 }
 
-/* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
- 
-.fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
- 
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
- 
-    -webkit-animation-duration:.5s;
-    -moz-animation-duration:.5s;
-    animation-duration:.5s;
-}
- 
+
 .header{
   -webkit-animation-delay: 0.3s;
 -moz-animation-delay: 0.3s;
@@ -90,3 +100,30 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+#two {
+  -moz-animation-delay: .2s;
+}
+#three {
+  -moz-animation-delay: .3s;
+}
+#four {
+  -moz-animation-delay: .4s;
+}
+#five {
+  -moz-animation-delay: .5s;
+}
+#six {
+  -moz-animation-delay: .6s;
+}
+#seven {
+  -moz-animation-delay: .7s;
+}
+#eight {
+  -moz-animation-delay: .8s;
+}
+
+.more {
+  display:none;
+}
+
