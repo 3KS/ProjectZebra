@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PlaceSearchResponse>
- <status>REQUEST_DENIED</status>
- <error_message>This service requires an API key.</error_message>
-</PlaceSearchResponse>

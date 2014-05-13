@@ -65,7 +65,7 @@ header {
   z-index: 4; }
 
 #login {
-  float: right; }
+  padding-left: 220px; }
 
 iframe {
   display: none;
@@ -74,7 +74,8 @@ iframe {
   width: 100%;
   float: left;
   position: absolute;
-  left: 0; }
+  left: 0;
+  margin-top: 80px; }
 
 #geocomplete {
   width: 300px;
@@ -198,7 +199,7 @@ iframe {
   /* For Safari */ }
 
 #wanted {
-  color: #3fc062;
+  color: #fff;
   height: 25.6px;
   width: 100%;
   font-size: 14px;
@@ -209,13 +210,3 @@ iframe {
   /* Animation time */
   -webkit-transition: height 0.5s;
   /* For Safari */ }
-
-/* #results{
-  width: 200px;
-  height:500px;
-  background-color:blue;
-  float:left;
-  position: absolute;
-  margin-top: 200px;
-  z-index:4; 
-} */

@@ -14,14 +14,15 @@ $gutter-width: 30;
 
 //Using the 1218 Grid system, content within this i.e. the iFrame is displayed
 //with it while the map is not
-wrapper{
-  @include column(16);
+wrapper {
+  display: inline;
+  float: left;
+  width: 97.59615%;
+  margin: 0 1.20192%;
   height: 100%;
   font-family: Gotham-Rnd;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
-//heaer class is the content, and header tag is the background.
 .header {
   width: 100%;
   height: 90px;
@@ -30,8 +31,8 @@ wrapper{
   float: left;
   position: fixed;
   display: inline-block;
-  color: white; 
-  z-index: 5;}
+  color: white;
+  z-index: 5; }
 
 .header img {
   float: left; }
@@ -43,74 +44,60 @@ wrapper{
 
 .header a {
   text-decoration: none;
-  color:#fff;
- }
+  color: #fff; }
 
 .header a:hover {
   transition: .3s color ease-in-out;
   moz-transition: color .3s ease-in-out;
   -mebkit-transition: color .3s ease-in-out;
-  color: #29773a;
- }
+  color: #29773a; }
 
 header {
-  display:none;
-  background-color:#3fc062;
-  height:82px;
-  float:left;
-  left:0;
-  position:fixed;
+  display: none;
+  background-color: #3fc062;
+  height: 82px;
+  float: left;
+  left: 0;
+  position: fixed;
   width: 100%;
-  z-index: 4;
-}
+  z-index: 4; }
 
-#login{
-  float:right;
-}
+#login {
+  padding-left: 220px; }
 
-//This is used to display a new page
-iframe{
+iframe {
   display: none;
   z-index: 3;
-  height:100%;
-  width:100%;  
-  float:left;
-   position:absolute;
-   left:0;
-}
+  height: 100%;
+  width: 100%;
+  float: left;
+  position: absolute;
+  left: 0;
+  margin-top: 80px; }
 
-//This controls how big the Search bar is
-#geocomplete{
-  width:300px;
-  height:20px;
-}
+#geocomplete {
+  width: 300px;
+  height: 20px; }
 
-//Controls the position of search bar
 #search {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -10px;
   margin-left: -150px;
-  z-index: 2;
-  }
+  z-index: 2; }
 
-//This controls height of results, it's set to show three
-.pac-container{
-  height: 98px;
-  }
+.pac-container {
+  height: 98px; }
 
-
-//The actual mapped display.
-.map_canvas{
-  background-image:url('../images/background.jpg');
-  height:100%;
-  width:100%;  
-  float:left;
-   position:absolute;
-   left:0;
-   z-index: 1;
-}
+.map_canvas {
+  background-image: url("../images/background.jpg");
+  height: 100%;
+  width: 100%;
+  float: left;
+  position: absolute;
+  left: 0;
+  z-index: 1; }
 
 #searchResults {
   border: 1px solid #3fc062;
@@ -215,7 +202,7 @@ padding-top: 10px;
 
 
 #wanted{
-  color: #3fc062;
+  color: #fff;
  height:25.6px;
 width:100%;
 font-size:14px;
@@ -226,16 +213,6 @@ padding-top: 10px;
 -webkit-transition:height 0.5s; /* For Safari */
 }
 
-
-/* #results{
-  width: 200px;
-  height:500px;
-  background-color:blue;
-  float:left;
-  position: absolute;
-  margin-top: 200px;
-  z-index:4; 
-} */
 
 
 
