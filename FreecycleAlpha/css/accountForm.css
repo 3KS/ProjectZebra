@@ -7,6 +7,7 @@
 }
 
 #myForm{
+	font-family: Gotham-Rnd;
 	z-index: 100;
 	position: absolute;
 	width:840px;
@@ -76,6 +77,8 @@
 	font-size:10px;
 	margin-top:5px;
 	float:right;
+		font-family: Gotham-Rnd;
+
 }
 .regForm img {
 	float:left;
