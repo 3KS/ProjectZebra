@@ -50,7 +50,17 @@ wrapper {
   transition: .3s color ease-in-out;
   moz-transition: color .3s ease-in-out;
   -mebkit-transition: color .3s ease-in-out;
-  color: #29773a; }
+  color: #29773a;
+ }
+
+ .clicked {
+color:black;
+ }
+
+#offer{
+  color:#fff;
+}
+
 
 header {
   display: none;
@@ -72,8 +82,7 @@ iframe {
   width: 100%;
   float: left;
   position: absolute;
-  left: 0;
-  margin-top: 80px; }
+  left: 0; }
 
 #geocomplete {
   width: 300px;
@@ -212,6 +221,7 @@ padding-top: 10px;
  transition:height 0.5s; /* Animation time */
 -webkit-transition:height 0.5s; /* For Safari */
 }
+
 
 
 

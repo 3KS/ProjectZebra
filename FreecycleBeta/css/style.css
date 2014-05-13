@@ -54,6 +54,12 @@ wrapper {
   -mebkit-transition: color .3s ease-in-out;
   color: #29773a; }
 
+.clicked {
+  color: black; }
+
+#offer {
+  color: #fff; }
+
 header {
   display: none;
   background-color: #3fc062;
@@ -74,8 +80,7 @@ iframe {
   width: 100%;
   float: left;
   position: absolute;
-  left: 0;
-  margin-top: 80px; }
+  left: 0; }
 
 #geocomplete {
   width: 300px;
