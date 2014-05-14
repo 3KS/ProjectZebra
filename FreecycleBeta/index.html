@@ -22,6 +22,10 @@
   
 
     <script>
+        var titlesArray = [];
+        var descriptionsArray = [];
+        var locationArray = [];
+        var categoryArray = [];
         var searchShifted = false;
         var loggedIn = false;
         $(function() {var myInput = $("#loginEmails");});
@@ -125,15 +129,15 @@
                     </div>
                     <div id="listingCenter">
                         <input type="text" name="location" id="location" placeholder="Enter Location...">
-                        <textarea  id="description" placeholder="Enter Description..."></textarea>
-                        <input class="submitButton" type="button" value="Submit">
+                        <textarea  id="description" name="description" placeholder="Enter Description..."></textarea>
+                        <input class="submitButton" type="button" value="Post">
                     </div>
                     <div id="listingRight">
                             <h1>Select Category</h1>
                             <input type="radio" id="radio1" name="category" value="offered" checked>
                             <label for="radio1">Offered</label>
 
-                            <input type="radio" id="radio2" name="category"value="false">
+                            <input type="radio" id="radio2" name="category"value="wanted">
                             <label for="radio2">Wanted</label>
                     </div>
                 </div>
@@ -262,9 +266,57 @@
             } else if(submitValue == "Login") {
                 $('#submitListing').css("display", "none");
                 $('#signUpButton').click();
+            } else if(submitValue == "Post") {
+                postItem();
             }
         }
-            
+          
+        function postItem() {
+            var posting = true;
+            if($("#title").val() == "") {
+                var glow = $('#title');
+                setTimeout(function(){glow.toggleClass('glow');}, 0);
+                setTimeout(function(){glow.toggleClass('glow');}, 1000);
+                posting = false;
+            }
+            if($("#description").val() == "") {
+                var glow2 = $('#description');
+                setTimeout(function(){glow2.toggleClass('glow');}, 0);
+                setTimeout(function(){glow2.toggleClass('glow');}, 1000);
+                posting = false;
+            }
+            if($("#location").val() == "") {
+                var glow3 = $('#location');
+                setTimeout(function(){glow3.toggleClass('glow');}, 0);
+                setTimeout(function(){glow3.toggleClass('glow');}, 1000);
+                posting = false;
+            }
+            if(posting) {
+                titlesArray.push({ 
+                    "title" : $("#title").val(),
+                    "location" : $("#location").val(),
+                    "description" : $("#description").val(),
+                    "category" : $('input[name=category]:checked').val()
+                });
+                console.log(titlesArray);
+                post_json_encoded(titlesArray);
+                $.colorbox.close();
+            }
+        }
+
+        function post_json_encoded(array) {
+            $.ajax({
+                type: "POST",
+                url: "postArray.php",
+                contentType: 'application/json', // outbound header
+                dataType: 'text',                // expected response
+                data: JSON.stringify(array),        // explicitly encode
+                success: function() {
+                    alert1('ok, json sent');
+                }
+            });
+        };
+
         function writeUserNameToPage(userName){
             $("#signUpButton").html(userName);
         };
