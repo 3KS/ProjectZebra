@@ -7,6 +7,8 @@
 
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/colorbox.css" rel="stylesheet"  media="screen" />
+
      <link href="css/animate.css" rel="stylesheet" type="text/css" />
          <link href="css/accountForm.css" rel="stylesheet" type="text/css" />
     <link href="css/listingForm.css" rel="stylesheet" type="text/css" />
@@ -42,76 +44,91 @@
     <wrapper>
 
 
-              <form name="myForm" id="myForm" class="hidden" method="get">
-               <div id="signIn" class="regForm"> 
-                    <h1>Sign In</h1>
+            <form name="myForm" id="myForm" class="hidden" method="get">
+                <div id="loggingOut">
+                     <div id="logoutLeft">
+                        <input class="submitButton" type="button" value="cancel">
+                    </div>
+                    <div id="logoutRight">
+                        <input class="submitButton" type="button" value="logout">
+                    </div>
+                </div>
+                
+                <div id="loggingIn">
+                <div id="signIn" class="regForm"> 
+                    <h1>sign in</h1>
                     <ul>
                         <li>
-                            <div id="loginEmails"><label for="loginEmail">Email </label></div>
+                            <div id="loginEmails"><label for="loginEmail">email </label></div>
                         </li>
                         <li>
                             <input type="text" name="loginEmail" id="loginEmail" >
                         </li>
                         <li>
-                            <label for="loginPassword">Password </label>
+                            <label for="loginPassword">password </label>
                         </li>
                         <li>
                             <input type="password" name="loginPassword" id="loginPassword">
                         </li>
                         <li>
-                            <input class="submitButton" type="button" value="Go">
+                            <input class="submitButton" type="button" value="go">
                         </li>
                     </ul>
-               </div>
-               <div class="vertLine"></div>
-               <div id="register" class="regForm">
-                    <h1>Register</h1>
+                </div>
+                <div class="vertLine"></div>
+                <div id="register" class="regForm">
+                    <h1>register</h1>
                     <ul>
                         <li>
-                            <label for="email">Email <span class="hiddenText" id="emailText">*required</span></label>
+                            <label for="email">email <span class="hiddenText" id="emailText">*required</span></label>
                         </li>
                         <li>
                             <input type="text" name="email" id="email">
                         </li>
                         <li>
-                            <label for="name">Name <span class="hiddenText" id="nameText">*required</span></label>
+                            <label for="name">name <span class="hiddenText" id="nameText">*required</span></label>
                         </li>
                         <li>
                             <input type="text" name="name" id="name">
                         </li>
                         <li>
-                            <label for="password">Password <span class="hiddenText" id="passwordText">*required</span></label>
+                            <label for="password">password <span class="hiddenText" id="passwordText">*required</span></label>
                         </li>
                         <li>
                             <input type="password" name="password" id="password">
                         </li>
                         
                     </ul>
-               </div>
-               <div id="captcha" class="regForm">
+                </div>
+                <div id="captcha" class="regForm">
                     <ul>
                         <li>                     
                             <img src="images/captcha.png">
                         </li>
                         <li>
-                            <label for="captcha">Captcha <span class="hiddenText" id="captchaText">*required</span></label>
+                            <label for="captcha">captcha <span class="hiddenText" id="captchaText">*required</span></label>
                         </li>
                         <li>
                             <input type="text" name="captcha" id="captchaInput">
                         </li>
                         <li>
-                            <input class="submitButton" type="button" value="Submit">
+                            <input class="submitButton" type="button" value="submit">
                         </li>
                     </ul>
-               </div>
+                </div>
+                </div>
             </form>
 
             <!--Submit a listing form-->    
             <form name="submitListing" id="submitListing" class="hidden" method="get">
                 <div id="loginFirst">
                     <h1>Please Login To Post a Listing</h1>
-                    <input class="submitButton" type="button" value="Cancel">
-                    <input class="submitButton" type="button" value="Login">
+                    <div id="loginLeft">
+                        <input class="submitButton" type="button" value="cancel">
+                    </div>
+                    <div id="loginRight">
+                        <input class="submitButton" type="button" value="login">
+                    </div>
                 </div>
 
                 <div id="postListing" class="hidden">
@@ -121,7 +138,7 @@
                         <div id="uploadFile">
                         <div id="buttonHolder">
                             <input id="realInput" type="file" />
-                            <input id="fakeInput" type="button" value="Upload Picture..."/>
+                            <input id="fakeInput" type="button" value="upload picture..."/>
                 </div>
                 
                 <p id="pathHolder"></p>
@@ -130,15 +147,15 @@
                     <div id="listingCenter">
                         <input type="text" name="location" id="location" placeholder="Enter Location...">
                         <textarea  id="description" name="description" placeholder="Enter Description..."></textarea>
-                        <input class="submitButton" type="button" value="Post">
+                        <input class="submitButton" type="button" value="post">
                     </div>
                     <div id="listingRight">
-                            <h1>Select Category</h1>
+                            <h1>select category</h1>
                             <input type="radio" id="radio1" name="category" value="offered" checked>
-                            <label for="radio1">Offered</label>
+                            <label for="radio1">offered</label>
 
                             <input type="radio" id="radio2" name="category"value="wanted">
-                            <label for="radio2">Wanted</label>
+                            <label for="radio2">wanted</label>
                     </div>
                 </div>
             </form>
@@ -232,23 +249,63 @@
         // INITIALIZATION       
         $("#signUpButton").colorbox({
             inline:true, 
+            width:"450px",
+            height:"60px",
+            //margin:"-200px 0px 0px -200px",
             href:"#myForm",
-            onLoad:function(){$("#myForm").css("display", "block");            console.log("Got here fool");},
-            onCleanup:function(){$("#myForm").css("display", "none");}
+            onLoad:function(){
+                    $("#myForm").css("display", "block");
+
+                    if(!loggedIn) {
+                        $("#loggingIn").css("display", "block");
+                        $("#loggingOut").css("display", "none");
+
+                        $("#myForm").css("width", "840px");
+                        $("#myForm").css("height", "300px");
+                        $("#myForm").css("margin-left", "-420px");
+                        $("#myForm").css("margin-top", "-150px");
+                    } else {
+                        $("#loggingIn").css("display", "none");
+                        $("#loggingOut").css("display", "block");
+
+                        $("#myForm").css("width", "450px");
+                        $("#myForm").css("height", "60px");
+                        $("#myForm").css("margin-left", "-225px");
+                        $("#myForm").css("margin-top", "-30px");
+                    }
+                },
+            onCleanup:function(){$("#myForm").css("display", "none");
+                    document.getElementById("myForm").reset();
+            }
         });
 
         $("#listingButton").colorbox({
             inline:true, 
+            width:"450px",
+            height:"150px",
             href:"#submitListing",
             onLoad:function(){
                     $("#submitListing").css("display", "block");
+                    if(!loggedIn) {
+                        $("#submitListing").css("width", "450px");
+                        $("#submitListing").css("height", "150px");
+                        $("#submitListing").css("margin-left", "-225px");
+                        $("#submitListing").css("margin-top", "-75px");
+                    }
                     if(loggedIn) {
+                        $("#submitListing").css("width", "840px");
+                        $("#submitListing").css("height", "400px");
+                        $("#submitListing").css("margin-left", "-420px");
+                        $("#submitListing").css("margin-top", "-200px");
                         $("#loginFirst").css("display", "none");
                         $("#postListing").css("display", "inline");
                     }
                     console.log("Got here fool");   
             },
-            onCleanup:function(){$("#submitListing").css("display", "none");}
+            onCleanup:function(){
+                $("#submitListing").css("display", "none");
+                document.getElementById("submitListing").reset();
+                }
         });
 
         $(document).on("click", ":button", function(e){
@@ -257,17 +314,21 @@
 
         // FUNCTIONS
         function sendData(submitValue){             
-            if(submitValue == "Go") {
+            if(submitValue == "go") {
                 checkLogin($("#loginEmail").val(), $("#loginPassword").val());
-            } else if(submitValue == "Submit") {
+            } else if(submitValue == "submit") {
                 createUser();
-            } else if(submitValue == "Cancel") {
+            } else if(submitValue == "cancel") {
                 $.colorbox.close();
-            } else if(submitValue == "Login") {
+            } else if(submitValue == "login") {
                 $('#submitListing').css("display", "none");
                 $('#signUpButton').click();
-            } else if(submitValue == "Post") {
+            } else if(submitValue == "post") {
                 postItem();
+            } else if(submitValue == "logout") {
+                loggedIn = false;
+                writeUserNameToPage("login or register");
+                $.colorbox.close();
             }
         }
           

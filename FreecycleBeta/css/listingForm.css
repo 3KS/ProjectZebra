@@ -8,7 +8,10 @@
 	left:50%;
 	margin-left: -420px;
 	margin-top: -200px;
-	background-color: #7f7f7f;
+	background-color: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
 }
 
 #listingLeft {
@@ -32,9 +35,17 @@
 }
 
 #listingRight h1 {
+	color:#fff;
+	margin-top:5px;
 	background-color:#555;
     padding:10px 11px;
     font-size:16px;
+    -webkit-border-top-left-radius: 4px;
+	-moz-border-top-left-radius: 4px;
+	border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
 }
 
 #listingRight input[type="radio"] {
@@ -46,59 +57,80 @@
     background-color:#ddd;
     padding:10px 11px;
     font-size:16px;
+    color:#9f9f9f;
 }
 
 #listingRight input[type="radio"]:checked + label { 
-    background-color:orange;
+    background-color:#3fc062;
+    color:#fff;
+}
+
+#listingRight input[type="radio"]:hover + label { 
+    background-color:#66e688;
+    color:#fff;
 }
 
 
 #title {
 	font-family: Gotham-Rnd;
-	background-color: #414141;
+	background-color: #ddd;
 	height:20%;
 	padding-left: 10%;
 	padding-right:10%;
-	width:80%;
-	margin:0;
-	border-style: none;
+	width:75%;
 	font-size: 22px;
 	color:#9f9f9f;
 	font-style: italic;
+	margin:5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
 }
 #uploadFile {
-	width:100%;
+	width:95%;
 	height:80%;
-	background-color: #616161;
+	background-color: #ddd;
+	margin:5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
 }
 #listingCenter textarea{
 	font-family: Gotham-Rnd;
-	background-color: #414141;
+	background-color: #ddd;
 	height:47.4%;
 	padding-left: 5%;
 	padding-right:5%;
 	padding-top:5%;
 	padding-bottom:5%;
 	width:90%;
-	margin:0;
-	border-style: none;
 	font-size: 22px;
 	color:#9f9f9f;
 	font-style: italic;
 	resize: none;
+	margin:5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
 }
 #location {
 	font-family: Gotham-Rnd;
-	background-color: #515151;
+	background-color: #ddd;
 	height:20%;
 	padding-left: 10%;
 	padding-right:10%;
 	width:80%;
-	margin:0;
-	border-style: none;
 	font-size: 22px;
 	color:#9f9f9f;
 	font-style: italic;
+	margin:5px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border-style: none;
 }
 
 #submitListing input[type=button] {
@@ -106,8 +138,8 @@
 	font-style: italic;
 	width:200px;
 	height:40px;
-	color:#eee;
-	background-color:#333333;
+	color:#fff;
+	background-color:#3fc062;
 	font-size:18px;
 	margin-top:10px;
 	-webkit-border-radius: 4px;
@@ -117,9 +149,49 @@
 	float:right;
 }
 
+#submitListing input[type=button]:hover {
+	background-color:#30b052;
+}
+
 #buttonHolder input[type=button] {
 	float:left;
 	margin-left:16.5%;
+}
+
+#loginFirst {
+	width:440px;
+	height:150px;
+	float:none;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+#loginFirst h1 {
+	text-align: center;
+	height:25px;
+	background-color:#3fc062;
+	border-style:none;
+	color:#fff;
+	font-weight:lighter;
+	font-size:14px;
+	padding-top:5px;
+	padding-left:12px;
+	padding-right:12px;
+	margin-bottom:30px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-bottom-left-radius: 4px;
+	border-bottom-left-radius:4px;
+	-webkit-border-bottom-right-radius: 4px;
+	-moz-border-bottom-right-radius: 4px;
+	border-bottom-right-radius:4px;
+}
+
+#loginLeft {
+	float:left;
+}
+
+#loginRight {
+	float:right;
 }
 
 .submitForm input {
