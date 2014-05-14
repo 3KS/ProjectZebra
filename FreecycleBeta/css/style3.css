@@ -79,27 +79,38 @@ body {
     z-index: 99;
 }
 
+#my-awesome-dropzone{
+  height: 300px;
+  width: 300px;
+  background-color: blue;
+;
+}
 
-#two {
+#one {
   -moz-animation-delay: .2s;
 }
-#three {
+#two {
   -moz-animation-delay: .3s;
 }
-#four {
+#three {
   -moz-animation-delay: .4s;
 }
-#five {
+#four {
   -moz-animation-delay: .5s;
 }
-#six {
+#five {
   -moz-animation-delay: .6s;
 }
-#seven {
+#six {
   -moz-animation-delay: .7s;
 }
-#eight {
+#seven {
   -moz-animation-delay: .8s;
 }
-
+#eight {
+  -moz-animation-delay: .9s;
+}
+#nine{
+  -moz-animation-delay: .1s;
+}
 
