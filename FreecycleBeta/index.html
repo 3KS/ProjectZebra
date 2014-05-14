@@ -361,6 +361,11 @@
                 });
                 console.log(titlesArray);
                 post_json_encoded(titlesArray);
+                if($('input[name=category]:checked').val() == "offered") {
+                    $('#offer').click();
+                } else {
+                    $('#want').click();
+                }
                 $.colorbox.close();
             }
         }
